@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Undangan Wali Murid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="landing-page">
+    <div class="landing-content">
+        <img src="logo.png" alt="Logo" class="landing-logo">
+
+        <h1>SDIT Daarul Hasanah</h1>
+        <h2>Surat Undangan Wali Murid</h2>
+
+        <p>
+            Sistem pembuatan Surat Undangan Wali Murid yang cepat,
+            praktis dan siap cetak.
+        </p>
+
+        <button class="btn-masuk" onclick="masukAplikasi()">
+            Masuk ke Aplikasi
+        </button>
+    </div>
+</div>
+
+<div class="form-container">
+
+    <h2>Input Data Surat</h2>
+
+    <label>Nomor Surat</label>
+    <input type="text" id="nomor">
+
+    <label>Perihal</label>
+    <input type="text" id="hal" value="Undangan">
+
+    <label>Sifat</label>
+    <input type="text" id="sifat" value="Penting">
+
+    <label>Kepada Yth.</label>
+    <input type="text" id="kepada" placeholder="Bapak/Ibu Orang Tua/Wali Murid">
+
+    <label>Nama Tujuan</label>
+    <input type="text" id="tujuan" placeholder="Ahmad Fauzi">
+
+    <label>Isi Undangan</label>
+    <textarea id="isi" rows="5"></textarea>
+
+    <label>Hari / Tanggal</label>
+    <input type="text" id="hari">
+
+    <label>Waktu</label>
+    <input type="text" id="waktu">
+
+    <label>Tempat</label>
+    <input type="text" id="tempat">
+
+    <button onclick="buatSurat()">
+        Buat Surat
+    </button>
+
+</div>
+
+<div id="surat">
+
+    <div class="kop">
+        <img src="kop-sdit.png" class="kop-banner">
+    </div>
+
+    <table class="header-surat">
+        <tr>
+            <td width="80">Nomor</td>
+            <td width="15">:</td>
+            <td><span id="s_nomor"></span></td>
+
+            <td rowspan="3" class="tanggal-kanan">
+                Jakarta, <span id="tanggal"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Hal</td>
+            <td>:</td>
+            <td><span id="s_hal"></span></td>
+        </tr>
+
+        <tr>
+            <td>Sifat</td>
+            <td>:</td>
+            <td><span id="s_sifat"></span></td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <p>
+    Kepada Yth.<br>
+    <span id="s_kepada"></span><br>
+    <b><span id="s_tujuan"></span></b><br>
+    <br>
+    Di Tempat
+</p>
+
+    <div class="arab">
+        السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُه
+    </div>
+
+    <p class="isi-surat">
+        Puji syukur kehadirat Tuhan Yang Maha Esa atas segala rahmat dan karunia-Nya kepada kita semua.
+    </p>
+
+    <p class="isi-surat">
+        <span id="s_isi"></span>
+    </p>
+
+    <br>
+
+    <table class="kegiatan">
+
+        <tr>
+            <td width="150">Hari / Tanggal</td>
+            <td width="20">:</td>
+            <td id="s_hari"></td>
+        </tr>
+
+        <tr>
+            <td>Waktu</td>
+            <td>:</td>
+            <td id="s_waktu"></td>
+        </tr>
+
+        <tr>
+            <td>Tempat</td>
+            <td>:</td>
+            <td id="s_tempat"></td>
+        </tr>
+
+    </table>
+
+    <p class="isi-surat">
+        Demikian surat undangan ini kami sampaikan. Atas perhatian
+        dan kehadiran Bapak/Ibu kami ucapkan terima kasih.
+    </p>
+
+    <div class="arab">
+        وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُه
+    </div>
+
+    <div class="ttd">
+
+        Kepala SDIT Daarul Hasanah
+
+        <br><br><br><br><br>
+
+        <b>
+            <u>Wakidi Ahmad Junaidi, S.Pd.I.</u>
+        </b>
+
+    </div>
+
+</div>
+
+<div class="aksi">
+    <button onclick="window.print()">
+        Cetak Surat
+    </button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
